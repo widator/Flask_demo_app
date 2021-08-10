@@ -1,3 +1,7 @@
+# export FLASK_ENV=development
+# export FLASK_APP=app
+# flask run # add `-p port_number` to change port
+
 import sqlite3
 from flask import Flask, request, url_for, flash, redirect
 from flask.templating import render_template

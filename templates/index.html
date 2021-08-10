@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+    <h1>{% block title %} Приветствуем на FlaskBlog {% endblock %}</h1>
     {% for post in posts %}
         <!--Кавычки заменены на одинарные в a href-->
         <a href="{{ url_for('post', post_id=post['id']) }}">
@@ -9,7 +9,7 @@
         </a>
         <span class="badge badge-primary">{{ post["created"] }}</span>
         <a href="{{ url_for('edit', id=post['id']) }}">
-            <span class="badge badge-warning">Edit</span>
+            <span class="badge badge-warning">Редактировать</span>
         </a>
         <hr>
     {% endfor %}

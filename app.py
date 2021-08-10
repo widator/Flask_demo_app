@@ -44,7 +44,7 @@ def create():
         content = request.form["content"]
 
         if not title:
-            flash("Title is required!")
+            flash("Заголовок обязателен!")
         else:
             conn = get_db_connection()
             conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
@@ -64,7 +64,7 @@ def edit(id):
         content = request.form['content']
 
         if not title:
-            flash('Title is required!')
+            flash('Заголовок обязателен!')
         else:
             conn = get_db_connection()
             conn.execute('UPDATE posts SET title = ?, content = ?'
@@ -83,5 +83,5 @@ def delete(id):
     conn.execute('DELETE FROM posts WHERE id = ?', (id,))
     conn.commit()
     conn.close()
-    flash('"{}" was successfully deleted!'.format(post['title']))
+    flash('"{}" Успешно удалена!'.format(post['title']))
     return redirect(url_for('index'))

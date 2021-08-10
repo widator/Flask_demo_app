@@ -1,3 +1,4 @@
+# main app file
 # export FLASK_ENV=development
 # export FLASK_APP=app
 # flask run # add `-p port_number` to change port
